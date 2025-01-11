@@ -17,8 +17,14 @@ tip_percentage = float(tip_percentage)
 
 tip_amount = bill * (tip_percentage/100)
 
+#How many people are splitting the bill?
+total_bill = round(bill + tip_amount)
 
-print( "The correct amount of tip to leave is $" + str( round( tip_amount,2)) )
+print(f"The correct amount of tip to leave is ${round( tip_amount,2)}. This means the total bill is ${total_bill}.")
+
+num_people_eating = int(input("How many people are splitting the bill?\n"))
+
+print(f"That means the final bill will be ${round(total_bill / num_people_eating,2)}")
 
 
 #Analysis 

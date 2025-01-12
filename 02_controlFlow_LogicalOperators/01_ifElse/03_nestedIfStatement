@@ -8,11 +8,15 @@ ticketPrice = 0
 if height > 120:
     print("You can ride the ride!")
     rider = True
-    if age >= 18:
+
+    if 45 > age >= 18:
         ticketPrice += 12
         print(ticketPrice)
     elif 12 < age < 18:
         ticketPrice += 7
+    elif 45 <= age <= 55:
+        ticketPrice = 0
+        print("Everything is going to be okay. Have a free ride on us!!!")
     else:
         ticketPrice += 5
     photo = input("Would you like a photo? Y/N : ").lower()
